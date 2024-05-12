@@ -23,7 +23,7 @@ class MobilePageTwo extends StatelessWidget {
         color: primaryBackgroundColor,
       ),
       key: globalKey,
-      height: MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top + kToolbarHeight),
+      // height: MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top + kToolbarHeight),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,9 +45,9 @@ class MobilePageTwo extends StatelessWidget {
                       "Stay Curious.\nExperiment.\nFail Fast.\nLearn.\nHave Fun",
                       style: GoogleFonts.bebasNeue(
                           color: primaryTextColor,
-                          fontSize: 75,
+                          fontSize: 45,
                           letterSpacing: -1,
-                          height: 0
+                          height: 0.9
                           // fontWeight: FontWeight.w100
                           ),
                     ),
@@ -65,19 +65,20 @@ class MobilePageTwo extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 60),
+                    padding: EdgeInsets.only(right: 10),
                     child: Text(
                       aboutme,
                       textAlign: TextAlign.left,
                       style: GoogleFonts.cinzel(
                         color: primaryTextColor,
                         fontSize: 16,
+                        // height: 1
                       ),
                     ),
                   ),
                   Row(
                     children: [
-                      CustomTextButton(text: "View my Projects", onPress: () => scrollToKey(pageThreeKey)),
+                      CustomTextButton(text: "View Projects", onPress: () => scrollToKey(pageThreeKey)),
                       CustomTextButton(text: "Contact Me", onPress: (){})
                     ],
                   )

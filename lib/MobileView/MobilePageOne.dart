@@ -31,9 +31,10 @@ class MobilePageOne extends StatelessWidget {
                 ),
                 Text(
                   "I BUILD THINGS",
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.bebasNeue(
                     color: primaryTextColor,
-                    fontSize: 100,
+                    fontSize: 60,
                     letterSpacing: -1,
                   ),
                 ),

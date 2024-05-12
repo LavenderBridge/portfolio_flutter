@@ -17,11 +17,12 @@ class MobilePageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 20),
       decoration: BoxDecoration(
         color: primaryBackgroundColor,
       ),
       key: globalKey,
-      height: MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top + kToolbarHeight),
+      // height: MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top + kToolbarHeight),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,12 +41,12 @@ class MobilePageThree extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Text(
-                      "My Projects",
+                      "Projects",
                       style: GoogleFonts.bebasNeue(
                           color: primaryTextColor,
                           fontSize: 75,
                           letterSpacing: -1,
-                          height: 0
+                          // height: 0
                           // fontWeight: FontWeight.w100
                           ),
                     ),
