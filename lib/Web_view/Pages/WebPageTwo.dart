@@ -35,15 +35,18 @@ class PageTwo extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Stay Curious.\nExperiment.\nFail Fast.\nLearn.\nHave Fun",
-                        style: GoogleFonts.bebasNeue(
-                            color: primaryTextColor,
-                            fontSize: 100,
-                            letterSpacing: -1,
-                            height: 0
-                            // fontWeight: FontWeight.w100
-                            ),
+                      FittedBox(
+                        fit: BoxFit.cover,
+                        child: Text(
+                          "Stay Curious.\nExperiment.\nFail Fast.\nLearn.\nHave Fun",
+                          style: GoogleFonts.bebasNeue(
+                              color: primaryTextColor,
+                              fontSize: 100,
+                              letterSpacing: -1,
+                              height: 0.9
+                              // fontWeight: FontWeight.w100
+                              ),
+                        ),
                       ),
                       Text(
                         "My passions and history. Who am I and what I do",
@@ -85,14 +88,32 @@ class PageTwo extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 80.0),
-                            child: Container(
-                              color: Colors.red,
-                              height: 150,
-                              width: double.maxFinite,
-                              //   child:
-                            )),
+                          padding: const EdgeInsets.symmetric(horizontal: 80.0),
+                          child: Container(
+                            // color: Colors.red,
+                            // height: 150,
+                            width: double.maxFinite,
+                            child: Column(
+                              children: [
+                                GridView(
+                                  shrinkWrap: true,
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 5,
+                                  ),
+                                  children: [
+                                    Card(),
+                                    Card(),
+                                    Card(),
+                                    Card(),
+                                    Card(),
+                                    Card(),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),

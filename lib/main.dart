@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MediaQuery.of(context).size.width > 1010 ? const WebHomePage() : const MobileHomePage(),
+      home: MediaQuery.of(context).size.width > 1010 && MediaQuery.of(context).size.height > 500 ? const WebHomePage() : const MobileHomePage(),
     );
   }
 }

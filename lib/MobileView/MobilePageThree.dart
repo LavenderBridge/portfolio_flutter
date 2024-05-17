@@ -70,15 +70,23 @@ class MobilePageThree extends StatelessWidget {
             // color: primaryTextColor,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ListView(
+              child: GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                  ListTile(title: Text("Project"),),
-                  ListTile(title: Text("Project"),),
-                  ListTile(title: Text("Project"),),
-                  ListTile(title: Text("Project"),),
-                  ListTile(title: Text("Project"),),
+                  Card(
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 2),
+                      
+                      child: Center(child: Text("Expensio")),
+                    ),
+                  ),
+                  Card(),
+                  Card(),
+                  Card(),
+                  Card(),
+                  Card(),
                 ],
               )
             ),
